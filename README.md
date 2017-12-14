@@ -2,7 +2,7 @@
 
 La versión de Ubuntu utilizada para este tutorial es **Ubuntu Server 16.04 LTS**.
 
-**LTS** es la abreviatura de_Long Term Support y significa que es una versión de Ubuntu que tendrá soporte y será actualiza durante más tiempo que una versión normal. Suelen ser versiones más estables y que han sido más testeadas que las versiones estándard. Para el caso de la versión 16.04, Ubuntu garantiza que tendrá soporte hasta abril de 2021_:
+**LTS** es la abreviatura de_Long Term Support y significa que es una versión de Ubuntu que tendrá soporte y será actualiza durante más tiempo que una versión normal. Suelen ser versiones más estables y que han sido más testeadas que las versiones estándard. Para el caso de la versión 16.04, Ubuntu _garantiza que tendrá soporte hasta abril de 2021_:
 
 ![](/assets/img/00_readme/01.png)
 
