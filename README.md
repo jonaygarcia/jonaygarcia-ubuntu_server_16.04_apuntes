@@ -6,7 +6,7 @@ La versión de Ubuntu utilizada para este tutorial es **Ubuntu Server 16.04 LTS*
 
 ![](/assets/img/00_readme/01.png)
 
-> **Nota**: Una versión estándard de Ubuntu es soportada durante 9 meses, mientras que una versión Ubuntu LTS \(Long Term Support\) es soportada durante 5 años, tanto para la versión de escritorio como para la versión de servidor.
+> **Nota**: Una versión estándard de Ubuntu es soportada durante 9 meses, mientras que una versión Ubuntu LTS (_Long Term Support_) es soportada durante 5 años, tanto para la versión de escritorio como para la versión de servidor.
 
 ## Tabla de Contenidos
 
