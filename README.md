@@ -2,20 +2,16 @@
 
 La versión de Ubuntu utilizada para este tutorial es **Ubuntu Server 16.04 LTS**.
 
-**LTS **es la abreviatura de_Long Term Support\_y significa que es una versión de Ubuntu que tendrá soporte y será actualiza durante más tiempo que una versión normal. Suelen ser versiones más estables y que han sido más testeadas que las versiones estándard. Para el caso de la versión 16.04, Ubuntu garantiza que tendrá \_soporte hasta abril de 2021_:
+**LTS **es la abreviatura de_Long Term Support\_y significa que es una versión de Ubuntu que tendrá soporte y será actualiza durante más tiempo que una versión normal. Suelen ser versiones más estables y que han sido más testeadas que las versiones estándard. Para el caso de la versión 16.04, Ubuntu garantiza que tendrá soporte hasta abril de 2021_:
 
 ![](/assets/img/00_readme/01.png)
 
 > **Nota**: Una versión estándard de Ubuntu es soportada durante 9 meses, mientras que una versión Ubuntu LTS \(Long Term Support\) es soportada durante 5 años, tanto para la versión de escritorio como para la versión de servidor.
 
-
-
 ## Tabla de Contenidos
 
 1. [Instalación sobre una VM en VirtualBox](/01_instalacion.md).
 2. [Configuración](/02_Configuracion.md).
-
-
 
 ## Bibliografía
 
