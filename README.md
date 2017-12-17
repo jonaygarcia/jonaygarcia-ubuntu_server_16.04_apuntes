@@ -17,7 +17,7 @@ La versión de Ubuntu utilizada para este tutorial es **Ubuntu Server 16.04 LTS*
 
 * [Official Ubuntu Server Guide](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/blob/master/pdfs/serverguide.pdf) \(Ubuntu, 2016\): It contains information on how to install and configure various server applications on your Ubuntu system to fit your needs. It is a step-by-step, task-oriented guide for configuring and customizing your system.
 
-* [Ubuntu Server Essentials](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/blob/master/pdfs/ubuntuserveressentials.pdf): Unleash the true potential of Ubuntu Server in your production environment using this administration guide
+* [Ubuntu Server Essentials](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/blob/master/pdfs/ubuntuserveressentials.pdf) \(Packt Publishing, 2015\): Unleash the true potential of Ubuntu Server in your production environment using this administration guide
 
 * [Ubuntu Server Cookbook](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/blob/master/pdfs/ubuntuservercookbook.pdf) \(Packt Publishing, 2016\): Arm yourself to make the most of the versatile, powerful Ubuntu Server with over 100 hands-on recipes.
 
