@@ -15,13 +15,13 @@ La versión de Ubuntu utilizada para este tutorial es **Ubuntu Server 16.04 LTS*
 
 ## Bibliografía
 
-* [Official Ubuntu Server Guide](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/assets/pdfs/serverguide.pdf) \(Ubuntu, 2016\): It contains information on how to install and configure various server applications on your Ubuntu system to fit your needs. It is a step-by-step, task-oriented guide for configuring and customizing your system.
+* [Official Ubuntu Server Guide](./assets/pdfs/serverguide.pdf) \(Ubuntu, 2016\): It contains information on how to install and configure various server applications on your Ubuntu system to fit your needs. It is a step-by-step, task-oriented guide for configuring and customizing your system.
 
-* [Ubuntu Server Essentials](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/assets/pdfs/ubuntuserveressentials.pdf) \(Packt Publishing, 2015\): Unleash the true potential of Ubuntu Server in your production environment using this administration guide
+* [Ubuntu Server Essentials](./assets/pdfs/ubuntuserveressentials.pdf) \(Packt Publishing, 2015\): Unleash the true potential of Ubuntu Server in your production environment using this administration guide
 
-* [Ubuntu Server Cookbook](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/assets/pdfs/ubuntuservercookbook.pdf) \(Packt Publishing, 2016\): Arm yourself to make the most of the versatile, powerful Ubuntu Server with over 100 hands-on recipes.
+* [Ubuntu Server Cookbook](./assets/pdfs/ubuntuservercookbook.pdf) \(Packt Publishing, 2016\): Arm yourself to make the most of the versatile, powerful Ubuntu Server with over 100 hands-on recipes.
 
-* [Mastering Ubuntu Server](https://github.com/jonaygarcia/ubuntu_server_16.04_apuntes/assets/pdfs/masteringubuntuserver.pdf) \(Packt Publishing, 2016\): Get up to date with the finer points of Ubuntu Server using this comprehensive guide.
+* [Mastering Ubuntu Server](./assets/pdfs/masteringubuntuserver.pdf) \(Packt Publishing, 2016\): Get up to date with the finer points of Ubuntu Server using this comprehensive guide.
 
 
 
