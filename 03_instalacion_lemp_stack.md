@@ -52,12 +52,43 @@ Creamos una nueva regla con los siguientes datos:
 
 ![img_02][img_02]
 
-Ahora para comprobar que funciona, en el navegador de nuestro equipo, abrimos un navegador web e intentamos acceder a la URL http://localhost:8080. Deberíamos ver la siguiente pantalla:
+Ahora, para comprobar que funciona, en el navegador de nuestro equipo, abrimos un navegador web e intentamos acceder a la URL http://localhost:8080. Deberíamos ver la siguiente pantalla:
 
 ![img_03][img_03]
 
+## Instalación del procesador PHP
+
+Ya tenemos instalado el servidor web, que es capaz de mostrar contenido estatico (HTML5 y CSS3). Para generar contenido dinámico debemos configurar el Nginx para que sea capaz de procesar páginas web creadas en PHP.
+
+Como Nginx no contiene procesamiento PHP nativo como otros servidores web, necesitaremos instalar php-fpm, que significa "administrador de procesos fastCGI". Le diremos a Nginx que pase las solicitudes de PHP a este software para su procesamiento.
+
+Para instalar PHP:
+
+```bash
+$ sudo apt-get install php-fpm php-mysql
+```
+
+### Configurar el procesador PHP
+
+Una vez instalado PHP, debemos realizar algunas configuraciones.
+
+La primera es abrir el fichero _/etc/php/7.0/fpm/php.ini_ y descomentar la línea _cgi.fix_pathinfo_ y configurarlo con el valor _1_ (Se encuentra en la línea 760 del fichero):
+
+```bash
+sudo nano /etc/php/7.0/fpm/php.ini
+...
+cgi.fix_pathinfo=1
+```
+
+Para que los cambios tengan efecto hay que reiniciar el procesador de PHP:
+
+```bash
+sudo systemctl restart php7.0-fpm
+```
 
 
+
+What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default.
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
