@@ -144,62 +144,53 @@ Ahora, para comprobar que funciona, en el navegador de nuestro equipo, abrimos u
 
 ![img_04][img_04]
 
+## Instalación de MySQL
+
+Ahora que ya tenemos el servidor web instalado y configurado para que genere contenido dinámico con PHP, vamos a instalar __MySQL__, que es un sistema gestor de base de datos que permite almacenar y gestionar datos para nuestro sitio web.
+
+Para instalarlo ejecutar el siguiente comando:
+
+```bash
+$ sudo apt-get install mysql-server
+```
+
+Durante el proceso de instalación nos pedirá introducir el password del usuario root, en este caso, pondremos la misma que el usuario de la VM, es decir, _formacion_.
+
+Una vez instalado, comprobamos que el servicio del MySQL se está ejecutando en la VM:
+
+```bash
+$ systemctl status mysql
+● mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+   Active: active (running) since lun 2018-04-02 15:51:24 WEST; 2min 7s ago
+ Main PID: 10791 (mysqld)
+   CGroup: /system.slice/mysql.service
+           └─10791 /usr/sbin/mysqld
+
+abr 02 15:51:23 ubuntu systemd[1]: Starting MySQL Community Server...
+abr 02 15:51:24 ubuntu systemd[1]: Started MySQL Community Server.
+```
+
+Ahora probamos a entrar a la consola de MySQL:
+
+```bash
+$ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.21-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+```
+
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
 [img_04]: ./assets/img/02_instalacion_lemp_stack/04.png "PHP OK"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-On Ubuntu 16.04, Nginx is configured to start running upon installation.
-
-If you have the ufw firewall running, as outlined in our initial setup guide, you will need to allow connections to Nginx. Nginx registers itself with ufw upon installation, so the procedure is rather straight forward.
-
-It is recommended that you enable the most restrictive profile that will still allow the traffic you want. Since we haven't configured SSL for our server yet, in this guide, we will only need to allow traffic on port 80.
-
-You can enable this by typing:
-
-    sudo ufw allow 'Nginx HTTP'
-
-You can verify the change by typing:
-
-    sudo ufw status
-
-You should see HTTP traffic allowed in the displayed output:
-
-Output
-Status: active
-
-To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       Anywhere                  
-Nginx HTTP                 ALLOW       Anywhere                  
-OpenSSH (v6)               ALLOW       Anywhere (v6)             
-Nginx HTTP (v6)            ALLOW       Anywhere (v6)
-
-With the new firewall rule added, you can test if the server is up and running by accessing your server's domain name or public IP address in your web browser.
-
-If you do not have a domain name pointed at your server and you do not know your server's public IP address, you can find it by typing one of the following into your terminal:
-
-    ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
-
-This will print out a few IP addresses. You can try each of them in turn in your web browser.
-
-As an alternative, you can check which IP address is accessible as viewed from other locations on the internet:
-
-    curl -4 icanhazip.com
-
-Type one of the addresses that you receive in your web browser. It should take you to Nginx's default landing page:
