@@ -86,9 +86,49 @@ Para que los cambios tengan efecto hay que reiniciar el procesador de PHP:
 sudo systemctl restart php7.0-fpm
 ```
 
+La segunda es configurar el servidor web _Nginx_ para que sea capaz de servir páginas web escritas en PHP. Para ello debemos abrir el fichero _/etc/nginx/sites-available/default_, borrar todo el contenido y añadir el siguiente:
+
+```bash
+sudo nano /etc/nginx/sites-available/default
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.php index.html index.htm index.nginx-debian.html;
+
+    server_name server_domain_or_IP;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
+```
+
+Salvamos los cambios (CTRL+o) y salimos del editor nano (CTRL+x).
+
+Comprobamos la sintaxis del fichero de configuración por si hubiera errores:
+
+```bash
+sudo nginx -t
+```
+
+Si no hay ningún error, recargamos la configuración del servidor Nginx para que lea los cambios:
+
+```bash
+sudo systemctl reload nginx
+```
 
 
-What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default.
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
