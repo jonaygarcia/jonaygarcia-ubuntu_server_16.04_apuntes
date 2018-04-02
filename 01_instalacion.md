@@ -72,8 +72,6 @@ En la pestaña _Motherboard_ del menú _System_ podemos ver la cantidad de memor
 
 > **Nota**: Sólo se puede ampliar o reducir la cantidad de memoria RAM con la Máquina Virtual apagada.
 
-
-
 En la pestaña _Processor_ del menú _System_ podemos ver el número de CPUs que tiene asignada la Máquina Virtual:
 
 ![](/assets/img/01_instalacion/11.png)
@@ -103,8 +101,6 @@ Seleccionamos la imagen desde el sistema de ficheros:
 ![](/assets/img/01_instalacion/14.png)
 
 Comprobamos que la imagen de _Ubuntu Server 16.04_ está montada en la unidad DVD-ROM virtual y pulsamos _OK_:
-
-
 
 ![](/assets/img/01_instalacion/15.png)
 
@@ -152,8 +148,6 @@ Seleccionamos la **distribución de teclado**, en este caso S_panish_, que es la
 
 > **Nota**: Si la distribucion de teclado que viene marcada por defecto no es  _Spanish_, es que **no hemos elegido el idioma español en uno de los pasos anteriores**. Por lo tanto, debemos movernos con el cursor hasta seleccionar como distribución de teclado  _spanish_. Si no lo hacemos, tendremos una distribución de teclado diferente a la disposición del teclado de nuestro ordenador: por ejemplo, si seleccionamos la distribución de teclado Enligsh, cuando pulsemos , por ejemplo, la tecla '_ñ'_ de nuestro teclado, estaremos insertando en realidad un '_;'_.
 
-
-
 Configuramos el **nombre del equipo**, en esta caso escribimos _ubuntu_, que es la opción que viene escrita por defecto, nos movemos con la tecla _Tabulador_ hasta situarnos en la opción _Continuar_ y pulsamos la tecla _Enter_:
 
 ![](/assets/img/01_instalacion/24.png)
@@ -162,11 +156,11 @@ Durante el proceso de instalación de Ubuntu debemos crear un usuario. Este usua
 
 Vamos a configurar un usuario con los siguientes datos:
 
-* **Nombre real del usuario**: cfgs.
+* **Nombre real del usuario**: formacion.
 
-* **Nombre de usuario para la cuenta**: cfgs.​
+* **Nombre de usuario para la cuenta**: formacion.​
 
-* **Password del usuario**: cfgs.
+* **Password del usuario**: formacion.
 
 Configuramos el **nombre real del usuario**. En este campo debemos poner el nombre completo del usuario, por ejemplo, _Jhon Allen Smith_. Es este caso vamos configurarlo a  _cfgs_, nos movemos con la tecla T_abulador_ hasta situarnos en la opción _Continuar_ y pulsamos la tecla _Enter_:
 
@@ -253,11 +247,7 @@ A continuación escribimos el comando _exit_ para salir del sistema:
 
 `cfgs@ubuntu:$ exit`
 
-
-
 ![](/assets/img/01_instalacion/42.png)
-
-
 
 ## Acceso a través de SSH
 
