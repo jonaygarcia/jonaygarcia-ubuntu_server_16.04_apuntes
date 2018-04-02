@@ -80,6 +80,8 @@ sudo nano /etc/php/7.0/fpm/php.ini
 cgi.fix_pathinfo=1
 ```
 
+Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
+
 Para que los cambios tengan efecto hay que reiniciar el procesador de PHP:
 
 ```bash
@@ -114,7 +116,7 @@ server {
 }
 ```
 
-Salvamos los cambios (CTRL+o) y salimos del editor nano (CTRL+x).
+Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
 
 Comprobamos la sintaxis del fichero de configuración por si hubiera errores:
 
