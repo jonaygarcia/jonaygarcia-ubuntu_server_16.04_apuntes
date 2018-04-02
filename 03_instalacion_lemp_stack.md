@@ -75,7 +75,7 @@ Una vez instalado PHP, debemos realizar algunas configuraciones.
 La primera es abrir el fichero _/etc/php/7.0/fpm/php.ini_ y descomentar la línea _cgi.fix_pathinfo_ y configurarlo con el valor _1_ (Se encuentra en la línea 760 del fichero):
 
 ```bash
-sudo nano /etc/php/7.0/fpm/php.ini
+$ sudo nano /etc/php/7.0/fpm/php.ini
 ...
 cgi.fix_pathinfo=1
 ```
@@ -85,13 +85,13 @@ Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
 Para que los cambios tengan efecto hay que reiniciar el procesador de PHP:
 
 ```bash
-sudo systemctl restart php7.0-fpm
+$ sudo systemctl restart php7.0-fpm
 ```
 
 La segunda es configurar el servidor web _Nginx_ para que sea capaz de servir páginas web escritas en PHP. Para ello debemos abrir el fichero _/etc/nginx/sites-available/default_, borrar todo el contenido y añadir el siguiente:
 
 ```bash
-sudo nano /etc/nginx/sites-available/default
+$ sudo nano /etc/nginx/sites-available/default
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -121,13 +121,13 @@ Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
 Comprobamos la sintaxis del fichero de configuración por si hubiera errores:
 
 ```bash
-sudo nginx -t
+$ sudo nginx -t
 ```
 
 Si no hay ningún error, recargamos la configuración del servidor Nginx para que lea los cambios:
 
 ```bash
-sudo systemctl reload nginx
+$ sudo systemctl reload nginx
 ```
 
 Ahora creamos una página web en PHP. Por defecto, estos ficheros han de crearse en la ubicación _/var/www/html_. Creamos el fichero _info.php_ dentro de la carpeta anterior:
