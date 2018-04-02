@@ -142,11 +142,20 @@ Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
 
 Ahora, para comprobar que funciona, en el navegador de nuestro equipo, abrimos un navegador web e intentamos acceder a la URL http://localhost:8080/info.php. Deberíamos ver la siguiente pantalla:
 
-
+![img_04][img_04]
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
+[img_04]: ./assets/img/02_instalacion_lemp_stack/04.png "PHP OK"
+
+
+
+
+
+
+
+
 
 
 
