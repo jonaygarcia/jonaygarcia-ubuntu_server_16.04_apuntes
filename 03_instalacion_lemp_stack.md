@@ -130,6 +130,18 @@ Si no hay ningún error, recargamos la configuración del servidor Nginx para qu
 sudo systemctl reload nginx
 ```
 
+Ahora creamos una página web en PHP. Por defecto, estos ficheros han de crearse en la ubicación _/var/www/html_. Creamos el fichero _info.php_ dentro de la carpeta anterior:
+
+```bash
+$ sudo nano /var/www/html/info.php
+<?php
+phpinfo();
+```
+
+Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
+
+Ahora, para comprobar que funciona, en el navegador de nuestro equipo, abrimos un navegador web e intentamos acceder a la URL http://localhost:8080/info.php. Deberíamos ver la siguiente pantalla:
+
 
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
