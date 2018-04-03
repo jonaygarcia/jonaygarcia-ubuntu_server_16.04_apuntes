@@ -395,7 +395,42 @@ Por último, en el panel de la izquierda, podemos ver la base de datos creada ll
 
 ### Instalación de WordPress
 
-Para instalar _WordPress_ debemos acceder a la URL _http://localhost:8080/wordpress/wp-admin/install.php_
+Para instalar _WordPress_ debemos acceder desde el navegador web a la URL _http://localhost:8080/wordpress/wp-admin/install.php_. Esto nos abrirá un asistente que nos guiará por la instalación.
+
+Lo primero es seleccionar el idioma _Español_ y pulsamos el botón _Continuar_
+
+![img_17][img_17]
+
+En la siguiente pantalla nos indica la información que necesita para poder realizar la instalación, pulsamos en el botón _¡Vamos a ello!_:
+
+![img_18][img_18]
+
+A continuación nos pide la información de base de datos que configuramos en el apartado anterior. Rellenamos el formulario con los siguientes datos:
+
+* __Nombre de la base de datos__: wordpress.
+* __Nombre de usuario__: wordpress.
+* __Contraseña__: worpress.
+* __Servidor de la base de datos__: localhost.
+* __Prefijo de tabla__: wp_.
+
+Luego pulsamos en el botón _Enviar_.
+
+![img_19][img_19]
+
+Si ha conseguido establecer conexión con la base de datos nos dirá que todo ha ido bien y ya puede empezar la instalación. Para ello pulsamos en el botón _Ejecutar la instalación_:
+
+![img_20][img_20]
+
+En la siguiente pantalla nos pide información del Sitio Web. Para ello hay que rellenar el formulario con los siguientes datos:
+
+* __Titulo del sitio__: Titulo del sitio web, por ejemplo, Sitio de Jonay Garcia.
+* __Nombre del usuario__: Usuario administrador del sitio web, por ejemplo, admin.
+* __Contraseña__: Password del usuario administrador. Yo en este caso he usado la que te genera automáticamente (apuntar la contraseña en algún sitio).
+* __Tu correo electrónico__: Email del usuario administrador.
+
+Posteriormente pulsamos en el botón _Instalar Wordpress__:
+
+![img_21][img_21]
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
@@ -413,3 +448,8 @@ Para instalar _WordPress_ debemos acceder a la URL _http://localhost:8080/wordpr
 [img_14]: ./assets/img/02_instalacion_lemp_stack/14.png "Crear BBDD con phpMyAdmin"
 [img_15]: ./assets/img/02_instalacion_lemp_stack/15.png "Crear BBDD con phpMyAdmin"
 [img_16]: ./assets/img/02_instalacion_lemp_stack/16.png "Crear BBDD con phpMyAdmin"
+[img_17]: ./assets/img/02_instalacion_lemp_stack/17.png "Instalacion WordPress"
+[img_18]: ./assets/img/02_instalacion_lemp_stack/18.png "Instalacion WordPress"
+[img_19]: ./assets/img/02_instalacion_lemp_stack/19.png "Instalacion WordPress"
+[img_20]: ./assets/img/02_instalacion_lemp_stack/20.png "Instalacion WordPress"
+[img_21]: ./assets/img/02_instalacion_lemp_stack/21.png "Instalacion WordPress"
