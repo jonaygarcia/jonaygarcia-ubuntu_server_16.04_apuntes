@@ -2,20 +2,22 @@
 
 __LEMP stack__ es un conjunto de software que se usa para servir páginas web dinámicas y aplicaciones web desarrolladas con PHP. Es un acrónimo que describe el uso de:
 
-* Linux como sistema operativo.
-* Nginx como servicio web.
-* MySQL como gestor de base de datos.
-* PHP como lenguaje de programación.
+* __(L)__ Linux como sistema operativo. En este caso usaremos _Ubuntu Server_ como distribución Linux, pero hay más distribuciones que podemos utilizar como _Debian_ o _CentOS_.
+* __(E)__ Nginx como servicio web. Aunque _Nginx_ no empieza por la letra _E_, se pronuncia _'enginx'_.
+* __(M)__ MySQL como gestor de base de datos. En el _LEMP Stack_ original se usaba _MySQL_, pero poco a poco se está sustituyendo por otro gestor de base de datos llamado _MariaDB_. En este caso usaremos _MySQL_.
+* __(P)__ PHP como lenguaje de programación para desarrollo de aplicaciones web dinámicas.
 
 > __Nota__: existe otro conjunto de software llamado __LAMP stack__ que la única diferencia con respeco a _LEMP stack_ es que usa __Apache__ como servidor web en vez de _Nginx_.
 
 ## Instalación de Nginx
 
-__Nginx__ es un servidor web que se utiliza para servir páginas web. Es más moderno y eficiente que _Apache_.
+Generalmente el servidor de páginas web más utilizado es _Apache HTTP Server_. Este servidor es muy sencillo y funciona sin problemas, sin embargo, si queremos un aspecto más profesional y un mejor rendimiento deberemos utilizar otros servidores de páginas web, por ejemplo, __Nginx__. __Nginx__ es un servidor web que se utiliza para servir páginas web.
+
+__Nginx__ ha demostrado un mejor rendimiento frente a _Apache_, especialmente cuando se realizan varias solicitudes a la vez ahorrando carga de trabajo y ofreciendo un mejor rendimiento al no crear diferentes procesos en cada petición.
 
 > __Nota__: Todo el software que usaremos se puede descargar directamente de los repositorios oficiales de Ubuntu utilizando el gestor de paquetes __apt__.
 
-Para instalar _Nginx_:
+Para instalar _Nginx_ debemos instalar el paquete _nginx_ utilizando el gestor de paquetes _apt_:
 
 ```bash
 $ sudo apt-get update
@@ -77,7 +79,7 @@ La primera es abrir el fichero _/etc/php/7.0/fpm/php.ini_ y descomentar la líne
 ```bash
 $ sudo nano /etc/php/7.0/fpm/php.ini
 ...
-cgi.fix_pathinfo=1
+cgi.fix_pathinfo=0
 ```
 
 Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
