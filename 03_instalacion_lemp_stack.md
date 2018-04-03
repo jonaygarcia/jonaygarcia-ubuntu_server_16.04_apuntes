@@ -256,7 +256,7 @@ Si todo ha ido bien, debemos ver la ventana de gestión de la base de datos _MyS
 
 ![img_12][img_12]
 
-## Instalar WordPress
+## Descargar WordPress y Configuración del Sistema
 
 __WordPress__ es un sistema de gestión de contenidos o CMS (por sus siglas en inglés, Content Management System) enfocado a la creación de cualquier tipo de página web. Originalmente alcanzó una gran popularidad en la creación de blogs, para convertirse con el tiempo en una de las principales herramientas para la creación de páginas web comerciales. Está desarrollado en el lenguaje __PHP__ para entornos que ejecuten __MySQL__ como gestor de Base de datos  y __Apache__ o __Nginx__ como servidor web. Se distribuye bajo licencia GPL.
 
@@ -309,7 +309,7 @@ lrwxrwxrwx 1 root     root          21 abr  3 13:13 phpmyadmin -> /usr/share/php
 drwxr-xr-x 5 www-data www-data    4096 feb  6 15:49 wordpress
 ```
 
-## Crear una Base de Datos en MySQL
+### Crear una Base de Datos en MySQL utilizando Línea de Comandos
 
 Para poder instalar correctamente _WordPress_ es necesario crear previamente una base de datos en MySQL y un usuario en base de datos que tenga todos los privilegios en esa base de datos.
 
@@ -362,21 +362,54 @@ Para salir del gestor de base de datos:
 mysql> exit
 ```
 
+### Crear una Base de Datos en MySQL utilizando phpMyAdmin
+
+Los pasos del apartado anterior se pueden realizar utilizando _phpMyAdmin_.
+
+En el menú superior _Cuentas de usuarios_ pulsamos en la opción _Agregar cuenta de usuario_:
+
+![img_13][img_13]
+
+Rellenamos el formulario con los siguientes datos:
+
+* Nombre de usuario: wordpress.
+* Nombre del Host: localhost.
+* Contraseña: wordpress.
+* Debe volver a escribir (la misma contraseña): wordpress.
+
+Marcamos la opción _Crear base de datos con el mismo nombre y torgar todos los privilegios_: esto nos creará una base de datos con el mismo nombre que hayamos puesto en el campo _Nombre de usuario_ en el formulario anterior y le otorgará todos los privilegios a ese usuario sobre la base de datos:
+
+![img_14][img_14]
+
+En la misma página hacemos scroll hasta el final y pulsamos el botón _Continuar_:
+
+![img_15][img_15]
+
+En la siguiente pantalla vemos el mensaje _Ha agregado un nuevo usuario_: esto significa que ha creado correctamente el usuario, la base de datos y le ha otorgado los permisos.
+
+Justo debajo podemos ver los comandos SQL que ha ejecutado.
+
+Por último, en el panel de la izquierda, podemos ver la base de datos creada llamada _wordpress_:
+
+![img_16][img_16]
+
+### Instalación de WordPress
+
+Para instalar _WordPress_ debemos acceder a la URL _http://localhost:8080/wordpress/wp-admin/install.php_
+
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
 [img_04]: ./assets/img/02_instalacion_lemp_stack/04.png "PHP OK"
 [img_05]: ./assets/img/02_instalacion_lemp_stack/05.png "MySQL root password"
 [img_06]: ./assets/img/02_instalacion_lemp_stack/06.png "MySQL root password"
-[img_07]: ./assets/img/02_instalacion_lemp_stack/07.png "MySQL root password"
-[img_08]: ./assets/img/02_instalacion_lemp_stack/08.png "MySQL root password"
-[img_09]: ./assets/img/02_instalacion_lemp_stack/09.png "MySQL root password"
-[img_10]: ./assets/img/02_instalacion_lemp_stack/10.png "MySQL root password"
-[img_11]: ./assets/img/02_instalacion_lemp_stack/11.png "MySQL root password"
-[img_12]: ./assets/img/02_instalacion_lemp_stack/12.png "MySQL root password"
-
-
-
-
-
-
+[img_07]: ./assets/img/02_instalacion_lemp_stack/07.png "phpMyAdmin"
+[img_08]: ./assets/img/02_instalacion_lemp_stack/08.png "phpMyAdmin"
+[img_09]: ./assets/img/02_instalacion_lemp_stack/09.png "phpMyAdmin"
+[img_10]: ./assets/img/02_instalacion_lemp_stack/10.png "phpMyAdmin"
+[img_11]: ./assets/img/02_instalacion_lemp_stack/11.png "phpMyAdmin"
+[img_12]: ./assets/img/02_instalacion_lemp_stack/12.png "phpMyAdmin"
+[img_13]: ./assets/img/02_instalacion_lemp_stack/13.png "Crear BBDD con phpMyAdmin"
+[img_14]: ./assets/img/02_instalacion_lemp_stack/14.png "Crear BBDD con phpMyAdmin"
+[img_15]: ./assets/img/02_instalacion_lemp_stack/15.png "Crear BBDD con phpMyAdmin"
+[img_16]: ./assets/img/02_instalacion_lemp_stack/16.png "Crear BBDD con phpMyAdmin"
