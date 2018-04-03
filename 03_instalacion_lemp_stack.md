@@ -154,7 +154,13 @@ Para instalarlo ejecutar el siguiente comando:
 $ sudo apt-get install mysql-server
 ```
 
-Durante el proceso de instalación nos pedirá introducir el password del usuario root, en este caso, pondremos la misma que el usuario de la VM, es decir, _formacion_.
+Durante el proceso de instalación nos pedirá introducir el password del usuario root, en este caso, pondremos la misma que el usuario de la VM, es decir, _formacion_:
+
+![img_05][img_05]
+
+Nos pide de nuevo introducir el password del usuario root, que debe coincidir con el que introdujimos en la ventana anterior:
+
+![img_06][img_06]
 
 Una vez instalado, comprobamos que el servicio del MySQL se está ejecutando en la VM:
 
@@ -194,3 +200,6 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
 [img_04]: ./assets/img/02_instalacion_lemp_stack/04.png "PHP OK"
+[img_05]: ./assets/img/02_instalacion_lemp_stack/05.png "MySQL root password"
+[img_06]: ./assets/img/02_instalacion_lemp_stack/06.png "MySQL root password"
+
