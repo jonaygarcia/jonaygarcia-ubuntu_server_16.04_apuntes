@@ -196,11 +196,55 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 ```
 
-## Instalar PHPMyAdmin
+## Instalar phpMyAdmin
+
+__phpMyAdmin__ es una herramienta web escrita en PHP cuya finalidad es gestionar la administración de una base de datos _MySQL_ a través del navegador web. Está  disponible bajo la licencia GPL (General Public License y en más de 50 idiomas este proyecto se encuentra vigente desde el año 1998. 
+
+Con esta herramienta podemos hacer cosas como:
+
+* Crear y eliminar bases de datos.
+* Crear y eliminar usuarios.
+* Administrar privilegios.
+* Crear, eliminar y modificar tablas (borrar, editar y añadir campos).
+* Exportar e importar bases de datos.
+
+Para instalar _phpMyAdmin_ debemos instalar el paquete _phpmyadmin_ utilizando el gestor de paquetes _apt_:
 
 ```bash
 $ sudo apt-get install phpmyadmin
 ```
+
+Durante la instalación nos pide elegir el servidor web en el que se va a ejecutar _phpMyAdmin_ y nos da dos opciones: apache2 y lighttpd. Como el servidor _Nginx_ no está en la lista, no marcamos ninguna opción y pulsamos _Aceptar_:
+
+![img_07][img_07]
+
+En la siguiente ventan nos pide si queremos configurar la conexión a base de datos con la herramienta _dbconfig-common_, decimos que sí:
+
+![img_08][img_08]
+
+Nos pide proporcionar el password del usuario _root_ de la base de datos MySQL, que anteriormente habíamos configurado como _formacion_:
+
+![img_09][img_09]
+
+En la siguiente pantalla nos piden confirmación de la contraseña, hay que poner la misma que la ventana anterior:
+
+![img_10][img_10]
+
+Una vez instalado, el _phpMyAdmin_ se instala en la ubicación _/usr/share/phpmyadmin_, como queremos acceder a ella a través de nuestro servidor _Nginx_, crearemos un enlace simbólico dentro de la carpeta _/var/www/html_:
+
+```bash
+$ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+```
+
+Una vez creado el enlace simbólico, probamos a acceder al _phpMyAdmin_ a través de la URL http://localhost:8080/phpmyadmin.
+
+En la ventana de inicio de sesión nos pide un usuario de base de datos, en este caso ponemos el usuario _root_ (el único usuario que hemos creado hasta el momento) y password el que configuramos durante el proceso de instalación, en este caso formación:
+
+![img_11][img_11]
+
+Si todo ha ido bien, debemos ver la ventana de gestión de la base de datos _MySQL_:
+
+![img_12][img_12]
 
 
 
@@ -210,4 +254,15 @@ $ sudo apt-get install phpmyadmin
 [img_04]: ./assets/img/02_instalacion_lemp_stack/04.png "PHP OK"
 [img_05]: ./assets/img/02_instalacion_lemp_stack/05.png "MySQL root password"
 [img_06]: ./assets/img/02_instalacion_lemp_stack/06.png "MySQL root password"
+[img_07]: ./assets/img/02_instalacion_lemp_stack/07.png "MySQL root password"
+[img_08]: ./assets/img/02_instalacion_lemp_stack/08.png "MySQL root password"
+[img_09]: ./assets/img/02_instalacion_lemp_stack/09.png "MySQL root password"
+[img_10]: ./assets/img/02_instalacion_lemp_stack/10.png "MySQL root password"
+[img_11]: ./assets/img/02_instalacion_lemp_stack/11.png "MySQL root password"
+[img_12]: ./assets/img/02_instalacion_lemp_stack/12.png "MySQL root password"
+
+
+
+
+
 
