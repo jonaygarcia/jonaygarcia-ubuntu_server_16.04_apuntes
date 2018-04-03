@@ -277,10 +277,36 @@ El fichero __latest.tar.gz__ es un fichero comprimido, para descomprimirlo debem
 $ sudo tar -xzvf latest.tar.gz 
 ```
 
-Esto descomprime el contenido del fichero en la ubicación _/var/www/html_. En este caso crea una carpeta llamada __wordpress__. Ahora debemos cambiar el propietario de la carpeta al usuario __www-data__, que es el usuario del sistema que ejecuta el proceso del _Nginx_:
+Esto descomprime el contenido del fichero en la ubicación _/var/www/html_. En este caso crea una carpeta llamada __wordpress__:
+
+```bash
+formacion@ubuntu:/var/www/html$ ls -l /var/www/html/
+total 8380
+-rw-r--r-- 1 root   root        612 abr  2 14:46 index.nginx-debian.html
+-rw-r--r-- 1 root   root         17 abr  2 15:27 info.php
+-rw-r--r-- 1 root   root    8565525 feb  6 15:51 latest.tar.gz
+lrwxrwxrwx 1 root   root         21 abr  3 13:13 phpmyadmin -> /usr/share/phpmyadmin
+drwxr-xr-x 5 nobody nogroup    4096 feb  6 15:49 wordpress
+```
+
+Ahora debemos cambiar el propietario de la carpeta al usuario __www-data__, que es el usuario del sistema que ejecuta el proceso del _Nginx_:
 
 ```
 $ sudo chown -R www-data:www-data /var/www/html/wordpress
+```
+
+> __Nota__: Esto es necesario hacerlo ya que la aplicación del _WordPress_ necesita permisos de escritura dentro del directorio _/var/www/html/wordpress_ para poder funcionar correctamente.
+
+Vemos cómo el propietario de la carpeta wordpress ha pasado de _nobody:nogroup_ a _www-data:www_data_:
+
+```bash
+formacion@ubuntu:/var/www/html$ ls -l /var/www/html/
+total 8380
+-rw-r--r-- 1 root     root         612 abr  2 14:46 index.nginx-debian.html
+-rw-r--r-- 1 root     root          17 abr  2 15:27 info.php
+-rw-r--r-- 1 root     root     8565525 feb  6 15:51 latest.tar.gz
+lrwxrwxrwx 1 root     root          21 abr  3 13:13 phpmyadmin -> /usr/share/phpmyadmin
+drwxr-xr-x 5 www-data www-data    4096 feb  6 15:49 wordpress
 ```
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
