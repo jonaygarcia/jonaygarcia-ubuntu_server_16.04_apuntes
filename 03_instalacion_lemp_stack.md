@@ -236,6 +236,16 @@ Una vez instalado, el _phpMyAdmin_ se instala en la ubicación _/usr/share/phpmy
 $ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 ```
 
+Vemos que se ha creado correctamente el enlace simbólico en la carpeta _/var/www/html_:
+
+```bash
+$ ls -l /var/www/html/
+total 8
+-rw-r--r-- 1 root root 612 abr  2 14:46 index.nginx-debian.html
+-rw-r--r-- 1 root root  17 abr  2 15:27 info.php
+lrwxrwxrwx 1 root root  21 abr  3 13:13 phpmyadmin -> /usr/share/phpmyadmin
+```
+
 Una vez creado el enlace simbólico, probamos a acceder al _phpMyAdmin_ a través de la URL http://localhost:8080/phpmyadmin.
 
 En la ventana de inicio de sesión nos pide un usuario de base de datos, en este caso ponemos el usuario _root_ (el único usuario que hemos creado hasta el momento) y password el que configuramos durante el proceso de instalación, en este caso formación:
@@ -253,7 +263,6 @@ __WordPress__ es un sistema de gestión de contenidos o CMS (por sus siglas en i
 Para instalar _WordPress_ hay primero hay que descargarselo. Para ello podemos usar el comando _wget_ que nos permite descar directamente un fichero a nuestro equipo.
 
 La última versión de _WordPress_ era la versión 4.9.4 cuando se hizo este tutorial y la podemos descargar desde la URL [https://wordpress.org/latest.tar.gz](https://wordpress.org/latest.tar.gz). Vamos a descargarla en nuestro equipo en la carpeta _/var/www/html_:
-
 
 ```bash
 $ cd /var/www/html
@@ -273,7 +282,6 @@ Esto descomprime el contenido del fichero en la ubicación _/var/www/html_. En e
 ```
 $ sudo chown -R www-data:www-data /var/www/html/wordpress
 ```
-
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
