@@ -3,7 +3,7 @@
 __LEMP stack__ es un conjunto de software que se usa para servir páginas web dinámicas y aplicaciones web desarrolladas con PHP. Es un acrónimo que describe el uso de:
 
 * __(L)__ Linux como sistema operativo. En este caso usaremos _Ubuntu Server_ como distribución Linux, pero hay más distribuciones que podemos utilizar como _Debian_ o _CentOS_.
-* __(E)__ Nginx como servicio web. Aunque _Nginx_ no empieza por la letra _E_, se pronuncia _'enginx'_.
+* __(E)__ Nginx como servicio web. Aunque _Nginx_ no empieza por la letra _E_, se pronuncia _'enginx'_, de esta manera hace posible este juego de palabras.
 * __(M)__ MySQL como gestor de base de datos. En el _LEMP Stack_ original se usaba _MySQL_, pero poco a poco se está sustituyendo por otro gestor de base de datos llamado _MariaDB_. En este caso usaremos _MySQL_.
 * __(P)__ PHP como lenguaje de programación para desarrollo de aplicaciones web dinámicas.
 
