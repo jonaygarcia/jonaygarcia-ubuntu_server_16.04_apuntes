@@ -372,10 +372,10 @@ En el menú superior _Cuentas de usuarios_ pulsamos en la opción _Agregar cuent
 
 Rellenamos el formulario con los siguientes datos:
 
-* Nombre de usuario: wordpress.
-* Nombre del Host: localhost.
-* Contraseña: wordpress.
-* Debe volver a escribir (la misma contraseña): wordpress.
+* __Nombre de usuario__: wordpress.
+* __Nombre del Host__: localhost.
+* __Contraseña__: wordpress.
+* __Debe volver a escribir__ (la misma contraseña): wordpress.
 
 Marcamos la opción _Crear base de datos con el mismo nombre y torgar todos los privilegios_: esto nos creará una base de datos con el mismo nombre que hayamos puesto en el campo _Nombre de usuario_ en el formulario anterior y le otorgará todos los privilegios a ese usuario sobre la base de datos:
 
@@ -432,6 +432,24 @@ Posteriormente pulsamos en el botón _Instalar Wordpress__:
 
 ![img_21][img_21]
 
+Si todo ha ido bien, nos aparece el mensaje _¡Lo lograste!_, y pulsamos en el botón _Acceder_ para acceder al panel de administración de nuestro sitio web:
+
+![img_22][img_22]
+
+Para acceder al panel de administración debemos rellenar el formulario introduciendo el usuario administrador y su password. Posteriormente pulsamos en el botón _Acceder_.
+
+La URL del panel de administración es http://localhost:8080/wordpress/wp-login.php:
+
+![img_23][img_23]
+
+Esta es la ventana del panel de administración de nuestro sitio web:
+
+![img_24][img_24]
+
+Para acceder al sitio web hay que acceder a la URL http://localhost:8080/wordpress:
+
+![img_25][img_25]
+
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
@@ -453,3 +471,7 @@ Posteriormente pulsamos en el botón _Instalar Wordpress__:
 [img_19]: ./assets/img/02_instalacion_lemp_stack/19.png "Instalacion WordPress"
 [img_20]: ./assets/img/02_instalacion_lemp_stack/20.png "Instalacion WordPress"
 [img_21]: ./assets/img/02_instalacion_lemp_stack/21.png "Instalacion WordPress"
+[img_22]: ./assets/img/02_instalacion_lemp_stack/22.png "Instalacion WordPress"
+[img_23]: ./assets/img/02_instalacion_lemp_stack/23.png "Instalacion WordPress"
+[img_24]: ./assets/img/02_instalacion_lemp_stack/24.png "Panel de Administración de WordPress"
+[img_25]: ./assets/img/02_instalacion_lemp_stack/25.png "Sitio Web de Wordpress"
