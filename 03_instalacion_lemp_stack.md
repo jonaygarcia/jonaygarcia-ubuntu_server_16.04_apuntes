@@ -291,11 +291,11 @@ drwxr-xr-x 5 nobody nogroup    4096 feb  6 15:49 wordpress
 
 Ahora debemos cambiar el propietario de la carpeta al usuario __www-data__, que es el usuario del sistema que ejecuta el proceso del _Nginx_:
 
-```
+```bash
 $ sudo chown -R www-data:www-data /var/www/html/wordpress
 ```
 
-> __Nota__: Esto es necesario hacerlo ya que la aplicación del _WordPress_ necesita permisos de escritura dentro del directorio _/var/www/html/wordpress_ para poder funcionar correctamente.
+> __Nota__: Esto es necesario hacerlo ya que la aplicación del _WordPress_ necesita permisos de escritura dentro del directorio _/var/www/html/wordpress_ para poder funcionar correctamente. El usuario que ejecuta el proceso del _Nginx_ es el usuario del sistema _www-data_, y es a este usuario al que hay que darle permisos de escritura en esta carpeta.
 
 Vemos cómo el propietario de la carpeta wordpress ha pasado de _nobody:nogroup_ a _www-data:www_data_:
 
