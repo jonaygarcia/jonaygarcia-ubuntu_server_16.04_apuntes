@@ -309,6 +309,59 @@ lrwxrwxrwx 1 root     root          21 abr  3 13:13 phpmyadmin -> /usr/share/php
 drwxr-xr-x 5 www-data www-data    4096 feb  6 15:49 wordpress
 ```
 
+## Crear una Base de Datos en MySQL
+
+Para poder instalar correctamente _WordPress_ es necesario crear previamente una base de datos en MySQL y un usuario en base de datos que tenga todos los privilegios en esa base de datos.
+
+Primero accedemos al gestor de base de datos _MySQL_ a través de línea de comandos:
+
+```bash
+formacion@ubuntu:~$ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.21-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
+
+Luego creamos la base de datos llamada _wordpress_:
+
+```bash
+mysql> CREATE DATABASE wordpress;
+Query OK, 1 row affected (0,00 sec)
+```
+
+Posteriormente creamos el usuario llamado _wordpress_ que tendrá como password _wordpress_ también:
+
+```bash
+mysql> CREATE USER wordpress@'localhost' identified by 'wordpress';
+Query OK, 0 rows affected (0,00 sec)
+```
+
+> __Nota__: El usuario wordpress@'localhost' sólo puede conectarse a la base de datos desde la misma máquina donde está instalado el gestor de base de datos.
+
+Ahora asignamos todos los privilegios al usuario _wordpress@'localhost'_ dentro de la base de datos _wordpress_:
+
+```bash
+mysql> GRANT ALL PRIVILEGES ON wordpress.* to wordpress@'localhost';
+Query OK, 0 rows affected (0,00 sec)
+```
+
+Para salir del gestor de base de datos:
+
+```bash
+mysql> exit
+```
+
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
