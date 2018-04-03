@@ -246,6 +246,33 @@ Si todo ha ido bien, debemos ver la ventana de gestión de la base de datos _MyS
 
 ![img_12][img_12]
 
+## Instalar WordPress
+
+__WordPress__ es un sistema de gestión de contenidos o CMS (por sus siglas en inglés, Content Management System) enfocado a la creación de cualquier tipo de página web. Originalmente alcanzó una gran popularidad en la creación de blogs, para convertirse con el tiempo en una de las principales herramientas para la creación de páginas web comerciales. Está desarrollado en el lenguaje __PHP__ para entornos que ejecuten __MySQL__ como gestor de Base de datos  y __Apache__ o __Nginx__ como servidor web. Se distribuye bajo licencia GPL.
+
+Para instalar _WordPress_ hay primero hay que descargarselo. Para ello podemos usar el comando _wget_ que nos permite descar directamente un fichero a nuestro equipo.
+
+La última versión de _WordPress_ era la versión 4.9.4 cuando se hizo este tutorial y la podemos descargar desde la URL [https://wordpress.org/latest.tar.gz](https://wordpress.org/latest.tar.gz). Vamos a descargarla en nuestro equipo en la carpeta _/var/www/html_:
+
+
+```bash
+$ cd /var/www/html
+$ sudo wget https://wordpress.org/latest.tar.gz 
+```
+
+> __Nota__: Si queremos instalar una otra versión de WordPress, podemos ver todas las versiones disponibles en la URL [https://wordpress.org/download/release-archive/](https://wordpress.org/download/release-archive/)
+
+El fichero __latest.tar.gz__ es un fichero comprimido, para descomprimirlo debemos usar el comando __tar__:
+
+```bash
+$ sudo tar -xzvf latest.tar.gz 
+```
+
+Esto descomprime el contenido del fichero en la ubicación _/var/www/html_. En este caso crea una carpeta llamada __wordpress__. Ahora debemos cambiar el propietario de la carpeta al usuario __www-data__, que es el usuario del sistema que ejecuta el proceso del _Nginx_:
+
+```
+$ sudo chown -R www-data:www-data /var/www/html/wordpress
+```
 
 
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
