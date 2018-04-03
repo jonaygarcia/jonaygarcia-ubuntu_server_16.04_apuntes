@@ -196,6 +196,14 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 ```
 
+## Instalar PHPMyAdmin
+
+```bash
+$ sudo apt-get install phpmyadmin
+```
+
+
+
 [img_01]: ./assets/img/02_instalacion_lemp_stack/01.png "HTTP Port Forwarding"
 [img_02]: ./assets/img/02_instalacion_lemp_stack/02.png "HTTP Port Forwarding"
 [img_03]: ./assets/img/02_instalacion_lemp_stack/03.png "Nginx OK"
