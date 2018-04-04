@@ -287,8 +287,8 @@ Luego pulsamos en el botón _Open_:
 
 Si todo va bien se nos abrirá una pantalla donde se nos piden las credenciales de un usuario para poder acceder:
 
-* **login as**: cfgs
-* **cfgs@localhost's password**: cfgs
+* **login as**: formacion
+* **cfgs@localhost's password**: formacion
 
 ![](/assets/img/01_instalacion/47.png)
 
