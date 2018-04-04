@@ -123,6 +123,7 @@ Para borrar todo el contenido del fichero usando el editor _Nano_:
 1. Situar el cursor al principio del fichero y pulsar CTRL+Shift+6.
 2. Mover el cursor utilizando los cursores hasta el final del fichero, seleccionando todas las filas del fichero.
 3. Pulsar CTRL+K para borrar el contenido seleccionado.
+4. Copiamos el nuevo contenido del fichero de configuración del _Nginx_.
 
 Salvamos los cambios en el fichero (CTRL+o) y salimos del editor nano (CTRL+x).
 
