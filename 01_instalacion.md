@@ -317,7 +317,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added '[localhost]:2222' (ECDSA) to the list of known hosts.
 ```
 
-Esto significa que es la primera vez que accedemos por SSH a la VM. Escribimos _yes_ y pulsamos _Enter_. Posteriormente nos pide el password del usuario _formacion_, en este caso es _formacion_:
+Este mensaje no es un error, significa significa que es la primera vez que accedemos por SSH a la VM. Escribimos _yes_ y pulsamos _Enter_ (las siguientes veces que accedamos a la VM de nuevo por SSH ya no nos va a aparecer este mensaje). Posteriormente nos pide el password del usuario _formacion_, en este caso es _formacion_:
 
 ![](/assets/img/01_instalacion/49.png)
 
