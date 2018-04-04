@@ -285,12 +285,14 @@ Luego pulsamos en el botón _Open_:
 
 ![](/assets/img/01_instalacion/46.png)
 
+Aparece un mensaje indicando que es la primera vez que accedemos a la Máquina Virtual por SSH, seleccionar Sí y pulsar Enter:
+
+![](/assets/img/01_instalacion/47.png)
+
 Si todo va bien se nos abrirá una pantalla donde se nos piden las credenciales de un usuario para poder acceder:
 
 * **login as**: formacion
-* **cfgs@localhost's password**: formacion
-
-![](/assets/img/01_instalacion/47.png)
+* **formacion@localhost's password**: formacion
 
 ![](/assets/img/01_instalacion/48.png)
 
