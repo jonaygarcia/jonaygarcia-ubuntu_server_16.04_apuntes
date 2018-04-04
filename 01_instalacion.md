@@ -300,7 +300,7 @@ Si todo va bien se nos abrirá una pantalla donde se nos piden las credenciales 
 
 ### Acceso a la VM por SSH mediante Git Bash
 
-Otra forma de acceder a la VM por SSH en vez de utilizar el cliente Putty es con la consola __Git Bash__. Cuando instalamos Git en Windows, automáticamente se nos instala una consola llamada _Git Bash_ que emula una terminal de Linux y viene instalada con el cliente SSH.
+Otra forma de acceder a la VM por SSH en vez de utilizar el cliente Putty es con la consola __Git Bash__. Cuando instalamos [Git](https://git-scm.com/download/win) en Windows, automáticamente se nos instala una consola llamada _Git Bash_ que emula una terminal de Linux y viene instalada con el cliente SSH.
 
 Abrimos una consola _Git Bash_ y ejecutamos el siguiente comando:
 
@@ -317,7 +317,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added '[localhost]:2222' (ECDSA) to the list of known hosts.
 ```
 
-Este mensaje no es un error, significa significa que es la primera vez que accedemos por SSH a la VM. Escribimos _yes_ y pulsamos _Enter_ (las siguientes veces que accedamos a la VM de nuevo por SSH ya no nos va a aparecer este mensaje). Posteriormente nos pide el password del usuario _formacion_, en este caso es _formacion_:
+Este mensaje no es un error, significa que es la primera vez que accedemos por SSH a la VM. Escribimos _yes_ y pulsamos _Enter_ (las siguientes veces que accedamos a la VM de nuevo por SSH no nos aparecerá este mensaje). Posteriormente nos pide el password del usuario _formacion_, en este caso es _formacion_:
 
 ![](/assets/img/01_instalacion/49.png)
 
