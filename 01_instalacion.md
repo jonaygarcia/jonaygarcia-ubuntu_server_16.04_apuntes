@@ -292,5 +292,9 @@ Si todo va bien se nos abrirá una pantalla donde se nos piden las credenciales 
 
 ![](/assets/img/01_instalacion/47.png)
 
+![](/assets/img/01_instalacion/48.png)
+
+
+
 Con esto hemos configurado nuestra Máquina Virtual para poder acceder a ella usando un cliente SSH.
 
