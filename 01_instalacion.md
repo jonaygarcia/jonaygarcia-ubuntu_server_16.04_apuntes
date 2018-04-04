@@ -274,6 +274,8 @@ Lo que estamos haciendo es configurar nuestro equipo para que, cada vez que inte
 
 ![](/assets/img/01_instalacion/45.png)
 
+### Acceso a la VM por SSH mediante cliente Putty
+
 Descargamos un cliente SSH para Windows como [PuTTY ](http://www.putty.org)o [MobaXterm](https://mobaxterm.mobatek.net).
 
 Si utilizamos el cliente _Putty_, para establecer una conexión SSH a la Máquina Virtual:
@@ -296,7 +298,28 @@ Si todo va bien se nos abrirá una pantalla donde se nos piden las credenciales 
 
 ![](/assets/img/01_instalacion/48.png)
 
+### Acceso a la VM por SSH mediante Git Bash
 
+Otra forma de acceder a la VM por SSH en vez de utilizar el cliente Putty es con la consola __Git Bash__. Cuando instalamos Git en Windows, automáticamente se nos instala una consola llamada _Git Bash_ que emula una terminal de Linux y viene instalada con el cliente SSH.
+
+Abrimos una consola _Git Bash_ y ejecutamos el siguiente comando:
+
+```bash
+$ ssh -p 2222 formacion@localhost
+```
+
+Nos sale el siguiente mensaje:
+
+```bash
+The authenticity of host '[localhost]:2222 ([127.0.0.1]:2222)' can't be established.
+ECDSA key fingerprint is SHA256:HcHnQ2cv1lWskFsqlOrHM887HbrRzJ20KEESm1sDp1g.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[localhost]:2222' (ECDSA) to the list of known hosts.
+```
+
+Esto significa que es la primera vez que accedemos por SSH a la VM. Escribimos _yes_ y pulsamos _Enter_. Posteriormente nos pide el password del usuario _formacion_, en este caso es _formacion_:
+
+![](/assets/img/01_instalacion/49.png)
 
 Con esto hemos configurado nuestra Máquina Virtual para poder acceder a ella usando un cliente SSH.
 
