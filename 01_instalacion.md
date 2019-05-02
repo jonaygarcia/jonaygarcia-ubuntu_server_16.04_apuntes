@@ -4,7 +4,7 @@
 
 La imagen ISO de _Ubuntu Server 16.04 LTS_ puede descargarse de la siguiente URL:
 
-[http://releases.ubuntu.com/16.04.3/ubuntu-16.04.3-server-amd64.iso](http://releases.ubuntu.com/16.04.3/ubuntu-16.04.3-server-amd64.iso)
+[http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso](http://releases.ubuntu.com/16.04.3/ubuntu-16.04.3-server-amd64.iso)
 
 ## Crear la Máquina Virtual
 
